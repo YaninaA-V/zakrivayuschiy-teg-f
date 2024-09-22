@@ -351,15 +351,17 @@ dialog::backdrop {
 }
 
 @supports (-webkit-text-stroke: 1px var(--color-label)) or 
-(text-stoke: 1px var(--color-label)) 
-{
+(text-stoke: 1px var(--color-label)) {
   .card_lable {
     -webkit-text-stroke: 1px var(--color-label);
     text-shadow: none;
   }
 }
 @supports (font-variation-settings: weight) {
-  .page .card_text {
+  .page {
+    font-weight: 400;
+  }
+  .card_text {
     font-weight: 400;
   }
   .card_titel {
