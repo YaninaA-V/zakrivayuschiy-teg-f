@@ -208,6 +208,7 @@
   font-size: 14px;
   line-height: 12.6px;
   mix-blend-mode: difference;
+  position: relative;
   z-index: 2;
 }
 .save-button {
@@ -358,10 +359,10 @@ dialog::backdrop {
   }
 }
 @supports (font-variation-settings: weight) {
-  .page .text {
+  .page .card_text {
     font-weight: 400;
   }
-  .card_text {
+  .card_titel {
     font-weight: 700;
   }
 }
