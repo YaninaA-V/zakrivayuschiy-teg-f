@@ -110,7 +110,7 @@
   font-size: 18px;
   line-height: 21.78px;
   font-family: var(--basic-text-family);
-  font-variation-settings: "wght" var(--basic-heading-weight);
+  font-variation-settings: "wght" var(--basic-heading-weight, 700);
   padding: 5px 26px 5px 8px;
 }
 .image_card {
@@ -148,7 +148,7 @@
   font-size: 18px;
   line-height: 21px;
   font-family: var(--basic-text-family);
-  font-variation-settings: "wght" var(--basic-text-weight);
+  font-variation-settings: "wght" var(--basic-text-weight, 400);
 }
 .content_button {
   display: flex;
@@ -349,8 +349,9 @@ dialog::backdrop {
   filter: invert(10%);
 }
 
-@supports (-webkit-text-stroke: 1px var(--color-label);
-) {
+@supports (-webkit-text-stroke: 1px var(--color-label)) or 
+(text-stoke: 1px var(--color-label));
+{
   .card_lable {
     -webkit-text-stroke: 1px var(--color-label);
     text-shadow: none;

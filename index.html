@@ -51,7 +51,7 @@
           Фритрек и нулевой спринт: Подготовка к работе
         </h3>
         <div class="image_card">
-          <p class="card_lable">&lt;/HTML&gt</p>
+          <p class="card_lable">&lt;/HTML&gt;</p>
           <img class="content_img filter-html"
         src="./images/unknown.png"
         alt="Визуализация Вселенной:нечто в невесомости"/>
@@ -87,7 +87,7 @@
             1 спринт: Я — чистый лист
           </h3>
           <div class="image_card">
-            <p class="card_lable">&lt;/NULL&gt</p>
+            <p class="card_lable">&lt;/NULL&gt;</p>
             <img class="content_img filter-null"
           src="./images/blank_slate.png"
           alt="Чистый лист в клетку"/>
@@ -123,9 +123,9 @@
             1 спринт: А если не получится?
           </h3>
           <div class="image_card">
-            <p class="card_lable">&lt;/START&gt</p>
+            <p class="card_lable">&lt;/START&gt;</p>
             <img class="content_img filter-start"
-          src="./images//beginning_ journey.png"
+          src="./images/beginning_ journey.png"
           alt="Ребенок перед большой лестницей"/>
           </div>
           <div class="card_paragraf">
@@ -159,7 +159,7 @@
             2 спринт: Погоня за идеалом
           </h3>
           <div class="image_card">
-            <p class="card_lable">&lt;/DESERT&gt</p>
+            <p class="card_lable">&lt;/DESERT&gt;</p>
             <img class="content_img filter-endless_desert"
           src="./images/endless_desert.png"
           alt="Человек в бескрайней пустыне"/>
@@ -195,7 +195,7 @@
             2 спринт: О тех, кто рядом
           </h3>
           <div class="image_card">
-            <p class="card_lable">&lt;/TEAM&gt</p>
+            <p class="card_lable">&lt;/TEAM&gt;</p>
             <img class="content_img filter-team"
           src="./images/dream_team.png"
           alt="Детская команда тянет канат"/>
@@ -231,7 +231,7 @@
             3 спринт: Обходные стратегии
           </h3>
           <div class="image_card">
-            <p class="card_lable">&lt;/IDEA&gt</p>
+            <p class="card_lable">&lt;/IDEA&gt;</p>
             <img class="content_img filter-idea"
           src="./images/new_ideas.png"
           alt="Горящая лампочка в руках"/>
@@ -267,7 +267,7 @@
             3 спринт: Когда опускаются руки
           </h3>
           <div class="image_card">
-            <p class="card_lable">&lt;/CONFUSION&gt</p>
+            <p class="card_lable">&lt;/CONFUSION&gt;</p>
             <img class="content_img filter-confusion"
           src="./images/confusion.png"
           alt="Тревожная картина: поднятая рука в воде"/>
@@ -297,14 +297,13 @@
               </span>
             </button>
           </div>
-        </section>
       </section>
       <section class="content_card">
         <h3 class="card_titel">
           «Сейчас я здесь»
         </h3>
         <div class="image_card">
-          <p class="card_lable">&lt;/FUTURE&gt</p>
+          <p class="card_lable">&lt;/FUTURE&gt;</p>
           <img class="content_img filter-future"
         src="./images/brave_new_world.png"
         alt="Дорога, лазурное озеро, высокие горы, на фоне голубого неба"/>
@@ -335,7 +334,7 @@
         </div>
       </section>
       <button class="save-button button_effect"
-      onclick="window['dialog-id'].showModal();"
+      onclick="window['dialog-id'].showModal()"
         aria-controls="dialog-id">
         <svg class="save-image" viewBox="0 0 21 21">
           <use href="svg/floppy.svg#floppy"/>    
@@ -350,7 +349,8 @@
           <use href="svg/floppy.svg#floppy"/>    
         </svg>
         <h4 class="text_popup">Вставьте дискету, чтобы продолжить</h4>
-        <button type="submit" class="button__popup button_effect">
+        <button type="submit" class="button__popup button_effect"
+        onclick="window['dialog-id'].close()">
           <span class="button__text">OK</span>
         </button>
     </form>
