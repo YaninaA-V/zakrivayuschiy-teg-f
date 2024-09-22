@@ -357,17 +357,7 @@ dialog::backdrop {
     text-shadow: none;
   }
 }
-@supports (font-variation-settings: weight) {
-  .page {
-    font-weight: 400;
-  }
-  .card_text {
-    font-weight: 400;
-  }
-  .card_titel {
-    font-weight: 700;
-  }
-}
+
 @media (width <= 375px) {
   .heading__titel {
     margin-block-start: 120px;
