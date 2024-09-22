@@ -350,7 +350,7 @@ dialog::backdrop {
 }
 
 @supports (-webkit-text-stroke: 1px var(--color-label)) or 
-(text-stoke: 1px var(--color-label));
+(text-stoke: 1px var(--color-label)); 
 {
   .card_lable {
     -webkit-text-stroke: 1px var(--color-label);
@@ -358,6 +358,11 @@ dialog::backdrop {
   }
 }
 
+@supports (font-variation-settings: normal) {
+  body {
+    font-family: Inter-Variable;
+  }
+}
 @media (width <= 375px) {
   .heading__titel {
     margin-block-start: 120px;
