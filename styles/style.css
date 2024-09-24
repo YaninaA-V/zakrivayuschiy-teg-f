@@ -231,21 +231,6 @@
   color: var(--button-text-color);
   z-index: 2;
 }
-.like-icon .contour {
-  display: block;
-  transition: fill 0.1s linear;
-}
-.core {
-  fill: transparent;
-  transition: fill 0.3s 0.03s linear;
-}
-.main-body {
-  fill: transparent;
-  transition: fill 0.3s linear;
-}
-.sparks {
-  opacity: 0;
-}
 dialog {
   display: grid;
   justify-content: center;
@@ -290,6 +275,7 @@ dialog::backdrop {
   background-color: var(--bg-color);
   padding: 9px 17px;
   z-index: 0;
+  text-transform: uppercase;
 }
 .opacity-filter {
   filter: opacity(90%);
@@ -314,9 +300,6 @@ dialog::backdrop {
 }
 .invert-filter {
   filter: invert(10%);
-}
-.uppercase {
-  text-transform: uppercase;
 }
 
 @supports (-webkit-text-stroke: 1px var(--color-label)) or
