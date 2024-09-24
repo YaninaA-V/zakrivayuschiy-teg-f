@@ -31,7 +31,6 @@
 }
 .header {
   inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
-  block-size: clamp(20.4375rem, 19.5352rem + 3.8498vw, 23rem);
   background-color: var(--bg-color);
   display: grid;
   justify-content: center;
@@ -42,11 +41,15 @@
   margin-block-start: 100px;
   margin-block-end: 50px;
 }
-.heading__titel {
+.heading__title {
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   line-height: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   margin-block-start: clamp(7.875rem, 7.6549rem + 0.939vw, 8.5rem);
-  margin-block-end: 20px;
+  margin-block-end: 20px;  
+  text-decoration: none;
+}
+.heading__title:focus {
+  outline: none;
 }
 .heading__subtitel {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
@@ -56,7 +59,7 @@
 .theme-menu {
   margin-block-end: var(--margin);
 }
-.theme-menu__list {
+.theme-menu__list {  
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -64,13 +67,15 @@
   font-size: 14px;
 }
 .theme-menu__button {
+  position: relative;
   border: none;
   background-color: transparent;
   text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 .theme-menu__button:hover {
   opacity: 0.6;
-  transition: 0.3s ease;
 }
 .theme-menu__button:disabled {
   opacity: 0.6;
@@ -97,7 +102,7 @@
   block-size: 14px;
   inline-size: 14px;
   color: var(--text-color);
-  margin-left: -22px; /*высчитала значение таким образом: т.к. элемент с абсолютным позиционированием, наезжает на текст. длина самого элемента 14px, контейнера 16px, а отступ 4px. т.о. нужно сдвинуть на 22px в обратную сторону */
+  left: -20px;
   animation: arrow 0.5s ease-in-out infinite alternate;
 }
 .content_card {
@@ -106,7 +111,7 @@
   border: 2px solid var(--decoration-color);
   margin-block-start: 50px;
 }
-.card_titel {
+.card_title {
   font-size: 18px;
   line-height: 21.78px;
   font-family: var(--basic-text-family);
@@ -138,7 +143,7 @@
   object-fit: cover;
   object-position: center;
 }
-.card_paragraf {
+.card_paragraph {
   display: flex;
   flex-direction: column;
   gap: 27px;
@@ -226,7 +231,7 @@
   color: var(--button-text-color);
   z-index: 2;
 }
-.like-icon {
+.like-icon .contour {
   display: block;
   transition: fill 0.1s linear;
 }
@@ -241,49 +246,10 @@
 .sparks {
   opacity: 0;
 }
-.card__icon-button:hover {
-  .like-icon {
-    .core {
-      fill: var(--heart-color-hover);
-      transition: fill 0.3s linear;
-    }
-    .main-body {
-      fill: var(--heart-color-hover);
-      transition: fill 0.3s 0.05s linear;
-    }
-  }
-}
-.card__icon-button:active {
-  .like-icon {
-    .main-body,
-    .core {
-      fill: var(--heart-color-active);
-      transition: fill 0.3s linear;
-    }
-  }
-}
-.like-icon.is-liked .main-body {
-  fill: var(--heart-color-click);
-  transition: fill 0.3s linear;
-}
-.like-icon.is-liked .core {
-  fill: var(--heart-color-click);
-  transition: fill 0.3s 0.05s linear;
-}
-.like-icon.is-liked .contour {
-  fill: var(--heart-color-click);
-  transition: fill 0.3s 0.06s linear;
-}
-.like-icon.is-liked .heart {
-  animation: scaling 0.3s 0.1s ease-in alternate;
-}
-.like-icon.is-liked .sparks {
-  animation: sparks 0.3s 0.3s ease-in alternate;
-}
-
 dialog {
   display: grid;
-  position: fixed;
+  justify-content: center;
+  align-items: center;
   padding: none;
   transition: opacity 0.3s ease-in-out;
   border: 2px solid var(--decoration-color);
@@ -325,33 +291,36 @@ dialog::backdrop {
   padding: 9px 17px;
   z-index: 0;
 }
-.filter-html {
+.opacity-filter {
   filter: opacity(90%);
 }
-.filter-null {
+.brightness-filter {
   filter: brightness(80%);
 }
-.filter-start {
+.sepia-filter {
   filter: sepia(0.7);
 }
-.filter-endless_desert {
+.blur-filter {
   filter: blur(2px);
 }
-.filter-team {
+.hue-rotate-filter {
   filter: hue-rotate(0.9turn);
 }
-.filter-idea {
+.saturate-filter {
   filter: saturate(200%);
 }
-.filter-confusion {
+.multifilter {
   filter: grayscale(80%) contrast(100%);
 }
-.filter-future {
+.invert-filter {
   filter: invert(10%);
 }
+.uppercase {
+  text-transform: uppercase;
+}
 
-@supports (-webkit-text-stroke: 1px var(--color-label)) or 
-(text-stoke: 1px var(--color-label)) {
+@supports (-webkit-text-stroke: 1px var(--color-label)) or
+  (text-stoke: 1px var(--color-label)) {
   .card_lable {
     -webkit-text-stroke: 1px var(--color-label);
     text-shadow: none;
